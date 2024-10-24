@@ -1,0 +1,33 @@
+﻿@using CRUDDATABASE.DAL
+@model QlUser
+
+@{
+	ViewData["Title"] = "Create User";
+}
+
+<div class="container mt-5">
+	<h2>@ViewData["Title"]</h2>
+	<div class="shadow p-3 mb-5 bg-white rounded">
+		<form asp-action="Create" method="post">
+			<div class="flex-row">
+				<label asp-for="NameUser" class="col-form-label-lg"></label>
+				<input asp-for="NameUser" class="form-control" />
+				<span asp-validation-for="NameUser" class="text-danger"></span>
+			</div>
+			<div class="flex-row">
+				<label asp-for="Username" class="col-form-label-lg"></label>
+				<input asp-for="Username" class="form-control" />
+				<span asp-validation-for="Username" class="text-danger"></span>
+			</div>
+			<div class="flex-row">
+				<label asp-for="PassUser" class="col-form-label-lg"></label>
+				<input asp-for="PassUser" class="form-control" />
+				<span asp-validation-for="PassUser" class="text-danger"></span>
+			</div>
+			<div class="flex-row mt-2">
+				<input type="submit" value="Create" class="btn btn-primary" />
+				<input type="submit" asp-action="Index" value="Back to List" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,50 @@
+﻿@using CRUDDATABASE.DAL
+@model QlUser
+
+@{
+	ViewData["Title"] = "Delete User";
+}
+
+<div class="container mt-5">
+	<h2>@ViewData["Title"]</h2>
+	<div class="shadow p-3 mb-5 bg-white rounded">
+		<form asp-action="Delete" method="post">
+			<div class="flex-row">
+				<label asp-for="IdUser" class="col-form-label-lg"></label>
+				<input asp-for="IdUser" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="NameUser" class="col-form-label-lg"></label>
+				<input asp-for="NameUser" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="Username" class="col-form-label-lg"></label>
+				<input asp-for="Username" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="PassUser" class="col-form-label-lg"></label>
+				<input asp-for="PassUser" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="Phone" class="col-form-label-lg"></label>
+				<input asp-for="Phone" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="Email" class="col-form-label-lg"></label>
+				<input asp-for="Email" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="Facebook" class="col-form-label-lg"></label>
+				<input asp-for="Facebook" class="form-control" readonly />
+			</div>
+			<div class="flex-row">
+				<label asp-for="AccessUser" class="col-form-label-lg"></label>
+				<input asp-for="AccessUser" class="form-control" readonly />
+			</div>
+			<div class="flex-row mt-2">
+				<input type="submit" value="Delete" class="btn btn-danger" />
+				<input type="submit" asp-action="Index" value="Back to List" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>
